@@ -73,7 +73,7 @@ void loop(){
         range = 0;
     }
 
-    if((range != oldRange)){
+    if(range != oldRange){
         if (!connectedBT){
             SerialBT.connect();
         }
@@ -83,7 +83,7 @@ void loop(){
         }
         oldRange = range;
     }
-    if(tick == standByTime){
+    if(tick == standByTime/10){
         SerialBT.disconnet();
     }else {
         tick++;
