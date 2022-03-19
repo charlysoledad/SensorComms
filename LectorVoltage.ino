@@ -7,7 +7,7 @@
 #define MAX_INPUT_VALUE 1500
 #define MIN_INPUT_VALUE 150
 
-const int ADC_VALUE = 36;
+const int ADC_VALUE = 15;
 
 // COMMS
 BluetoothSerial SerialBT;
@@ -50,7 +50,7 @@ void setup(){
     * 
 */
 void loop(){
-    float voltage_value = (float) analogRead(15) ;
+    float voltage_value = (float) analogRead(ADC_VALUE) ;
     Serial.println(voltage_value); // To Serial 
 
     if(voltage_value >= MAX_INPUT_VALUE)
